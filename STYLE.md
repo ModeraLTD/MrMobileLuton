@@ -1,6 +1,11 @@
 # Style guide
-This document covers the style guide of which all code must comply with.
+A simple guide to Python code formatting for this project.
 
-## Functions & variable names
-**Variables** must be camelCase
-**Functions** must be snake_case
+- **Variables** must be camelCase  
+- **Functions** must be snake_case  
+- Tabs should be 4 spaces  
+- Use `black` formatting  
+- Use trailing commas  
+- Add docstrings inside each function and class
+	- Parameters with types
+	- Return values with types
