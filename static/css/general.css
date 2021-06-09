@@ -6,10 +6,24 @@
 	--white: #C0BFB1;
 }
 
+@font-face {
+    font-family: 'ModernSans';
+    src: url('fonts/ModernSansLight.eot');
+    src: url('fonts/ModernSansLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ModernSansLight.woff2') format('woff2'),
+        url('fonts/ModernSansLight.woff') format('woff'),
+        url('fonts/ModernSansLight.ttf') format('truetype'),
+        url('fonts/ModernSansLight.svg#ModernSansLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
 	background-color: var(--white);
 	margin: 0;
 	padding: 0;
+	font-family: 'ModernSans';
 }
 
 /* Navigation bar */
@@ -24,15 +38,43 @@ body {
 	z-index: 100;
 }
 
-.navbar a {
-	float: left;
+.navbar .buttons {
+	width: 100%;
+	height: 80%;
+	position: absolute;
+	/*top: 50%;
+	transform: translate(0,-50%);*/
+}
+
+.navbar .buttons a {
+	float: right;
 	display: block;
-	color: black;
+	color: var(--dark);
 	text-align: center;
-	padding: 14px 16px;
+	margin: 27px 15px;
+	padding-bottom: 5px;
+	padding-right: 12px;
+	padding-left: 12px;
 	text-decoration: none;
-	font-size: 18px;
-	transition: background-color 0.3s;
+	font-size: 24px;
+	border-bottom: 1px solid white;
+	transition: border-bottom 0.3s;
+	font-family: 'ModernSans';
+	font-weight: bold;
+}
+
+.navbar .buttons a:hover {
+	border-bottom: 1px solid var(--dark);
+}
+
+.navbar .buttons a.active {
+	border-bottom: 2px solid var(--dark);
+	font-weight: bolder;
+	cursor: default;
+}
+
+.navbar .buttons .logo {
+	float: left;
 }
 
 /* End navigation bar */

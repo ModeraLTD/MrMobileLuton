@@ -10,14 +10,15 @@
 
 <body>
 	<div class="navbar">
-		<a href="#" class="logo">
-			<img border="0" class="logo_img" alt="MrMobile logo" src="{{ url_for('static', filename='imgs/logo.png' )}}" />
-		</a>
-		<a href="/" class="active home">Home</a>
-		<a href="repairs">Repairs</a>
-		<a href="laptops">Laptops</a>
-		<a href="phones">Phones</a>
-		<a href="contact">Contact us</a>
+		<div class="buttons">
+			<a href="#" class="logo">
+				<img border="0" class="logo_img" alt="MrMobile logo" src="{{ url_for('static', filename='imgs/logo.png' )}}" />
+			</a>
+			<a href="contact">Contact us</a>
+			<a href="laptops">Products</a>
+			<a href="repairs">Repairs</a>
+			<a href="/" class="active">Home</a>
+		</div>
 	</div>
 </body>
 </html>
