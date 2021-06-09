@@ -1,5 +1,34 @@
 .section {
 	width: 100%;
-	height: 50px;
-	background-color: red;
+	font-family: 'ModernSans';
+}
+
+body {
+	/*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+					url("imgs/placeholder.jpg");
+	background-repeat: repeat;
+	background-color: red;*/
+}
+
+#bgimg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	filter: brightness(150%);
+	z-index: -100;
+}
+
+#main {
+	width: 100%;
+	height: 1450px;
+}
+
+#main h1, h2 {
+	text-align: center;
+	color: var(--dark);
+}
+
+#main h1 {
+	font-size: 80px;
+	margin-bottom: 5px;
 }
