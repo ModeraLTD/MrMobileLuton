@@ -3,6 +3,14 @@
 	font-family: 'ModernSans';
 }
 
+.checked {
+	color: orange;
+}
+
+.fa.fa-star {
+	font-size: 25px;
+}
+
 body {
 	/*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
 					url("imgs/placeholder.jpg");
@@ -17,6 +25,7 @@ body {
 	height: 100%;
 	z-index: -100;
 	opacity: 0.35;
+	transition: 0.2s ease;
 }
 
 /* ------- MAIN ------- */
@@ -71,14 +80,13 @@ body {
 /* ------- GUARANTEE ------- */
 #guarantee {
 	width: 100%;
-	height: 450px;
+	height: 630px;
 	background-color: white;
 }
 
 #guarantee .content {
-	height: 300px;
+	height: 500px;
 	width: calc(100% - 100px);
-	background-color: rgba(242, 255, 0, 0.53);
 	padding-top: 80px;
 	padding-bottom: 50px;
 	padding-left: 50px;
@@ -86,15 +94,79 @@ body {
 	column-count: 2;
 }
 
+#guarantee .content .contentSection:first-child {float: left;}
+#guarantee .content .contentSection:last-child {float: right;}
+
+/* Transitioning */
+#guarantee .content .contentSection.inactive {opacity: 0;}
+#guarantee .content .contentSection:first-child.inactive {margin-left: -500px;}
+#guarantee .content .contentSection:last-child.inactive {margin-right: -500px;}
+
 #guarantee .content .contentSection {
-	height: 190%;
-    width: 50%;
-	background-color: rgba(255, 0, 0, 0.53);
+	height: 100%;
+    width: 90%;
 
 	padding-left: 15px;
 	padding-right: 15px;
+	opacity: 1;
+
+	transition: margin-left 1s ease, margin-right 1s ease, opacity 1.5s ease;
 }
 
-#guarantee .content .contentSection:first-child {float: left;}
-#guarantee .content .contentSection:last-child {float: right;}
+#guarantee .content .contentSection h1 {
+	font-family: 'Evogria';
+	font-size: 60px;
+	letter-spacing: 5px;
+	line-height: 8s0px;
+	color: var(--shade);
+	text-shadow: 0 1px 0 var(--dark), 0 2px 0 var(--dark);
+}
+
+#guarantee .content .contentSection h2 {
+	padding-top: 40px;
+	font-size: 40px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+#guarantee .content .contentSection h2 .thick {
+	-webkit-text-stroke: 1px var(--dark);
+}
+
+#guarantee .content .contentSection .rating {
+	text-align: right;
+}
+
+#guarantee .content .contentSection .reviews {
+	height: 200px;
+	width: 500px;
+	display: grid;
+	grid-template-columns: 50px 400px 50px; /*columns widths*/
+	margin-top: 50px;
+	float: right;
+	border: 1px solid rgb(140, 140, 140);
+	border-radius: 10px;
+}
+
+#guarantee .content .contentSection .reviews .buttonWrapper::before {
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#guarantee .content .contentSection .reviews .buttonWrapper button {
+	width: 50px;
+	height: 50px;
+	background-color: var(--light);
+	outline: none;
+	text-decoration: none;
+	border: none;
+	border-radius: 100%;
+
+	font-family: 'ModernSans';
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
 /* ------- GUARANTEE END ------- */

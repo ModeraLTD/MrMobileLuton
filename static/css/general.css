@@ -6,15 +6,56 @@
 	--white: #C0BFB1;
 }
 
+/* Fonts */
+
 @font-face {
     font-family: 'ModernSans';
-    src: url('fonts/ModernSansLight.eot');
-    src: url('fonts/ModernSansLight.eot?#iefix') format('embedded-opentype'),
-        url('fonts/ModernSansLight.woff2') format('woff2'),
-        url('fonts/ModernSansLight.woff') format('woff'),
-        url('fonts/ModernSansLight.ttf') format('truetype'),
-        url('fonts/ModernSansLight.svg#ModernSansLight') format('svg');
+    src: url('fonts/ModernSans/ModernSansLight.eot');
+    src: url('fonts/ModernSans/ModernSansLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ModernSans/ModernSansLight.woff2') format('woff2'),
+        url('fonts/ModernSans/ModernSansLight.woff') format('woff'),
+        url('fonts/ModernSans/ModernSansLight.ttf') format('truetype'),
+        url('fonts/ModernSans/ModernSansLight.svg#ModernSansLight') format('svg');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Evogria';
+    src: url('fonts/ModernSans/ModernSansLight.eot');
+    src: url('fonts/ModernSans/ModernSansLight.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ModernSans/ModernSansLight.woff2') format('woff2'),
+        url('fonts/ModernSans/ModernSansLight.woff') format('woff'),
+        url('fonts/ModernSans/ModernSansLight.ttf') format('truetype'),
+        url('fonts/ModernSans/ModernSansLight.svg#ModernSansLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Evogria';
+    src: url('fonts/Evogria/Evogria-Italic.eot');
+    src: url('fonts/Evogria/Evogria-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Evogria/Evogria-Italic.woff2') format('woff2'),
+        url('fonts/Evogria/Evogria-Italic.woff') format('woff'),
+        url('fonts/Evogria/Evogria-Italic.ttf') format('truetype'),
+        url('fonts/Evogria/Evogria-Italic.svg#Evogria-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Evogria';
+    src: url('fonts/Evogria/Evogria.eot');
+    src: url('fonts/Evogria/Evogria.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Evogria/Evogria.woff2') format('woff2'),
+        url('fonts/Evogria/Evogria.woff') format('woff'),
+        url('fonts/Evogria/Evogria.ttf') format('truetype'),
+        url('fonts/Evogria/Evogria.svg#Evogria') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
