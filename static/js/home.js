@@ -61,12 +61,16 @@ function _updateQuotes(flash) {
 	author = quotes[quotesIndex][0];
 	quote = quotes[quotesIndex][1];
 
-	if (flash) {
+	if (flash && !switchingQuotes) {
+		switchingQuotes = true;
 		$(".quotes").fadeOut(200);
 		setTimeout(function() {
 			$("#author").text(author);
 			$("#quote").text(quote);
 			$(".quotes").fadeIn(200);
+			setTimeout(function() {
+				switchingQuotes = false;
+			}, 200);
 		}, 200);
 	} else {
 		$("#author").text(author);
@@ -90,6 +94,7 @@ $(document).ready(function() {
 cs_visible = false;
 currentBlur = 0;
 quotesIndex = 0;
+switchingQuotes = false;
 
 quotes = [
 	[
