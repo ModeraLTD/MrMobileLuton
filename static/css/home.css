@@ -10,17 +10,20 @@ body {
 	background-color: red;*/
 }
 
+/* Background */
 #bgimg {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	filter: brightness(550%);
 	z-index: -100;
+	opacity: 0.35;
 }
 
+/* ------- MAIN ------- */
 #main {
 	width: 100%;
-	height: 1450px;
+	/* Remove 80px navbar space */
+	height: calc(100% - 80px);
 }
 
 #main h1, h2 {
@@ -31,6 +34,8 @@ body {
 #main h1 {
 	font-size: 80px;
 	margin-bottom: 5px;
+	margin-top: 0px;
+	padding-top: 50px;
 }
 
 #main .buttons {
@@ -61,3 +66,12 @@ body {
 	border: 2px solid var(--mid);
 	color: var(--mid);
 }
+/* ------- MAIN END ------- */
+
+/* ------- GUARANTEE ------- */
+#guarantee {
+	width: 100%;
+	height: 250px;
+	background-color: white;
+}
+/* ------- GUARANTEE END ------- */
