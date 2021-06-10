@@ -62,7 +62,7 @@
 				<img src="{{ url_for('static', filename='css/imgs/repair.png')}}" class="img" />
 				<h1>GUARANTEED<br />FAST<br />REPAIR</h1>
 			</div>
-			<!--<div class="contentSection right inactive">
+			<div class="contentSection right inactive">
 				<h2 class="title">We are rated <span class="thick">5 stars</span> on Google Reviews</h2>
 				<div class="rating">
 					<span class="fa fa-star checked" style="display: none;"></span>
@@ -95,7 +95,7 @@
 						<button onclick="updateQuotes(1);">►</button>
 					</div>
 				</div>
-			</div>-->
+			</div>
 		</div>
 	</div>
 
