@@ -10,13 +10,15 @@
 
 	<!--
 	Stylesheets
-	general.css: 	In all pages, contains navigation bar & other details
-	home.css:		Stylesheet for this page
-	wave.css:		Stylesheet for the wave
+	general.css: 		In all pages, contains navigation bar & other details
+	home.css:			Stylesheet for this page
+	wave.css:			Stylesheet for the wave
+	waveDisplaced.css:	Stylesheet for the wave not at the bottom of the page
 	-->
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/wave.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/waveDisplaced.css')}}" />
 </head>
 
 <body>
@@ -97,12 +99,16 @@
 		</div>
 	</div>
 
+	<div class="waveDispl flipped" style="background-color: rgb(191, 197, 201);"></div>
+
 	<!-- Repair details section -->
 	<div class="section" id="repairDetails">
-		<h1>hi</h1>
-		<h1>hi</h1>
-		<h1>hi</h1>
-		<h1>hi</h1>
+		<h1>Repair services are available for:</h1>
+		 <div class="grid">
+			 <div class="col">
+
+	 		</div>
+		 </div>
 	</div>
 </body>
 </html>
