@@ -3,10 +3,17 @@
 	<title>Mr Mobile Luton</title>
 	<meta charset="UTF-8"/>
 
+	<!-- Scripts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="{{ url_for('static', filename='js/home.js')}}"></script>
 
+	<!--
+	Stylesheets
+	general.css: 	In all pages, contains navigation bar & other details
+	home.css:		Stylesheet for this page
+	wave.css:		Stylesheet for the wave
+	-->
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/wave.css')}}" />
@@ -49,11 +56,12 @@
 	<!-- Guarantee section + reviews -->
 	<div class="section" id="guarantee">
 		<div class="content">
-			<div class="contentSection left inactiveMAKEINACTIVE">
+			<div class="contentSection left inactive">
+				<img src="{{ url_for('static', filename='css/imgs/repair.png')}}" class="img" />
 				<h1>GUARANTEED<br />FAST<br />REPAIR</h1>
 			</div>
-			<div class="contentSection right inactiveMAKEINACTIVE">
-				<h2>We are rated <span class="thick">5 stars</span> on Google Reviews</h2>
+			<div class="contentSection right inactive">
+				<h2 class="title">We are rated <span class="thick">5 stars</span> on Google Reviews</h2>
 				<div class="rating">
 					<span class="fa fa-star checked" style="display: none;"></span>
 					<span class="fa fa-star checked" style="display: none;"></span>
@@ -66,9 +74,35 @@
 					<div class="buttonWrapper">
 						<button onclick="updateQuotes(-1);">◄</button>
 					</div>
+					<div class="quotes">
+						<h2 id="author">Author name</h2>
+						<div class="quoteContainer">
+							<h3 class="startquote">"</h3>
+							<h3 id="quote">quotequotequotequotequotequotequotequote</h3>
+							<h3 class="endquote">"</h3>
+						</div>
+						<div class="ratingQuotes">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						</div>
+					</div>
+					<div class="buttonWrapper">
+						<button onclick="updateQuotes(1);">►</button>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<!-- Repair details section -->
+	<div class="section" id="repairDetails">
+		<h1>hi</h1>
+		<h1>hi</h1>
+		<h1>hi</h1>
+		<h1>hi</h1>
 	</div>
 </body>
 </html>
