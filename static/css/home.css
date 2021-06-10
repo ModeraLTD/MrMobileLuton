@@ -148,10 +148,10 @@ body {
 	border-radius: 10px;
 }
 
-#guarantee .content .contentSection .reviews .buttonWrapper::before {
+#guarantee .content .contentSection .reviews .buttonWrapper {
 	height: 100%;
+	display: table-cell;
 	vertical-align: middle;
-	display: inline-block;
 }
 
 #guarantee .content .contentSection .reviews .buttonWrapper button {
@@ -162,6 +162,8 @@ body {
 	text-decoration: none;
 	border: none;
 	border-radius: 100%;
+
+	display: block;
 
 	font-family: 'ModernSans';
 	font-weight: bold;

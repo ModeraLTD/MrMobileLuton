@@ -1,3 +1,4 @@
+// Handle the background scroll blur
 function handleBgBlur(scroll) {
 	val = Math.ceil((scroll/blurScrollMax) * blurPxMax);
 	if (Math.abs(val-currentBlur) > changeThreshold) {
@@ -12,6 +13,7 @@ function handleBgBlur(scroll) {
 	}
 }
 
+// Handle scroll event
 function handleScroll(scroll) {
 	if (!cs_visible) {
 		if (scroll >= 300) {
@@ -40,6 +42,7 @@ function handleScroll(scroll) {
 	handleBgBlur(Math.ceil(scroll / 10) * 10);
 }
 
+// When the page loads
 $(document).ready(function() {
 	$(".fadein").hide();
 	$(".fadein").fadeIn(1500).show();
