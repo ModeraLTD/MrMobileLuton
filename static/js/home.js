@@ -43,6 +43,16 @@ function handleScroll(scroll) {
 		$(".slidein").removeClass("inactive");
 	}
 
+	if (!products_visible && (scroll >= 1963)) {
+		products_visible = true;
+		$("#products .reveal .cover").removeClass("hidden");
+		$(".reveal h1").fadeIn(1000);
+		setTimeout(function() {
+			$(".slideinLeft").removeClass("slideinLeft");
+			$(".slideinRight").removeClass("slideinRight");
+		}, 500);
+	}
+
 	handleBgBlur(Math.ceil(scroll / 10) * 10);
 }
 
@@ -161,6 +171,7 @@ function updateQuotes(flash) {
 cs_visible = false;
 repair_visible = false;
 reviews_visible = false;
+products_visible = false;
 
 currentBlur = 0;
 quotesIndex = 0;

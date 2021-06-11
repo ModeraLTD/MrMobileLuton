@@ -14,12 +14,14 @@
 	home.css:			Stylesheet for this page
 	wave.css:			Stylesheet for the wave
 	waveDisplaced.css:	Stylesheet for the wave not at the bottom of the page
+	reveal.css:			Revealing text
 	speedo.css:			Speedometer
 	-->
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/wave.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/waveDisplaced.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/reveal.css')}}" />
 	<!--<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/speedo.css')}}" />-->
 </head>
 
@@ -139,6 +141,18 @@
 
 	<!-- buy products section -->
 	<div class="section" id="products">
+		<div class="reveal">
+			<h1>Buy our popular products</h1>
+			<div class="cover hidden"></div>
+		</div>
+		<div class="buttonContainer">
+			<button onclick="open('apple');" class="slideinLeft">APPLE</button>
+			<button onclick="open('samsung');" class="slideinRight">SAMSUNG</button>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div class="section" id="footer">
 
 	</div>
 </body>
