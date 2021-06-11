@@ -37,23 +37,23 @@ body {
 
 #main h1, h2 {
 	text-align: center;
-	color: var(--dark);
+	color: black;
+	font-family: 'Evogria';
 }
 
 @keyframes float-noshadow-moderate {
 	0% {
-		transform: translatey(0px);
+		transform: translatey(5px);
 	}
 	50% {
 		transform: translatey(-10px);
 	}
 	100% {
-		transform: translatey(0px);
+		transform: translatey(5px);
 	}
 }
 
 #main h1 {
-	font-family: 'Evogria';
 	font-size: 90px;
 	color: linear-gradient(to right, #121FCF 0%, #3CB2CF 100%);;
 	margin-bottom: 5px;
