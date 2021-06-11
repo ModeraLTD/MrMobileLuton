@@ -78,6 +78,39 @@ function _updateQuotes(flash) {
 	}
 }
 
+// Fast flashing green
+function flashFast() {
+	chars = [
+		$("#fast-0"),
+		$("#fast-1"),
+		$("#fast-2"),
+		$("#fast-3")
+	];
+
+	maxcharslen = chars.length - 1;
+
+	function lightUp(chars, index) {
+		if (index > maxcharslen) {
+			index = 0;
+			chars[chars.length - 1].removeClass("lightUp");
+			setTimeout(lightUp, 1000, chars, index);
+			return;
+		}
+
+		for (i in chars) {
+			if (i == index) {
+				chars[i].addClass("lightUp");
+			} else {
+				chars[i].removeClass("lightUp");
+			}
+		}
+
+		setTimeout(lightUp, 200, chars, index + 1);
+	}
+
+	lightUp(chars, 0);
+}
+
 // When the page loads
 $(document).ready(function() {
 	$(".fadein").hide();
@@ -89,6 +122,7 @@ $(document).ready(function() {
 	});
 
 	_updateQuotes(false);
+	flashFast();
 });
 
 cs_visible = false;

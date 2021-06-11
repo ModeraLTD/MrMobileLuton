@@ -115,18 +115,57 @@ body {
 
 #guarantee .content .contentSection h1 {
 	font-family: 'Evogria';
-	font-size: 60px;
+	font-size: 80px;
 	letter-spacing: 5px;
 	line-height: 8s0px;
 	color: var(--shade);
 	text-shadow: 0 1px 0 var(--dark), 0 2px 0 var(--dark);
 	float: left;
 }
+
+#guarantee .content .contentSection .imgwrapper .img {
+	float: right;
+	display: block;
+	max-width: 290px;
+	max-height: 500px;
+	width: auto;
+	height: auto;
+}
+
+#guarantee .content .contentSection.left .imgwrapper {
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+/* Flash fast */
+.flashfast {
+	transition: color 0.5s ease-out;
+}
+
+.flashfast.lightUp {
+	color: rgb(161, 224, 27);
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
 /* ------- GUARANTEE END ------- */
 
 /* ------- REPAIR DETAILS ------- */
 #repairDetails {
-	height: 300px;
+	height: 500px;
 	background-color: rgb(191, 197, 201);
 }
 
@@ -139,10 +178,40 @@ body {
 
 #repairDetails .grid {
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	width: 100%;
+	height: 340px;
+	grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 #repairDetails .grid .col {
 	padding-left: 20px;
 	padding-right: 20px;
+	text-align: center;
+	border-radius: 30px;
+	transition: 0.2s ease;
+}
+
+#repairDetails .grid .col:hover img {
+	margin-top: -20px;
+}
+
+#repairDetails .grid .col:hover h2 {
+	text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+#repairDetails .grid .col img {
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	transition: 0.2s ease;
+}
+
+#repairDetails .grid .col h2 {
+	font-size: 40px;
+	margin-top: 0px;
+	transition: 0.2s ease;
 }
