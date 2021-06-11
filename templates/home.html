@@ -27,7 +27,7 @@
 
 <body>
 	<!-- Background image is located below -->
-	<img src="{{ url_for('static', filename='css/imgs/bg-min.jpg')}}" id="bgimg" />
+	<img src="https://lh3.googleusercontent.com/p/AF1QipOtxJ5ZEem_S47e_EpRAhtQDR2eBOTFHCRsqSFn=w573-h573-p-no" id="bgimg" />
 
 	<!-- Navigation bar -->
 	<div class="navbar">
@@ -153,7 +153,33 @@
 
 	<!-- footer -->
 	<div class="section" id="footer">
-
+		<div class="content">
+			<div class="col">
+				<div id="businessDetails">
+					<h4 style="font-size: 30; margin-bottom: 0px; margin-top: 0;">MrMobile</h4>
+					<h4 style="margin-top: 10px;">Unit 10A, 172 Dunstable Rd, Luton LU4 8FG</h4>
+				</div>
+				<div id="contactDetails">
+					<div class="detail">
+						<img src="https://img.icons8.com/ios-filled/50/000000/apple-phone.png"/>
+						<h4>07884 420200</h4>
+					</div>
+					<div class="detail">
+						<img src="https://img.icons8.com/metro/26/000000/new-post.png"/>
+						<h4 style="color: red;">missing@email.address</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div id="links">
+				<a href="{{url_for('about')}}">About</a>
+				<a href="{{url_for('services')}}">Services</a>
+				<a href="{{url_for('contact')}}">Contact</a>
+				<a href="{{url_for('home')}}">Home</a>
+				</div>
+				<h4 class="rights">Copyright © 2021 MrMobile. All Rights Reserved</h4>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

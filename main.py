@@ -13,6 +13,21 @@ def home():
     return render_template("home.html")
 
 
+@app.route("/about")
+def about():
+    return ""
+
+
+@app.route("/services")
+def services():
+    return ""
+
+
+@app.route("/contact")
+def contact():
+    return ""
+
+
 def main():
     app.run(debug=True)
 
