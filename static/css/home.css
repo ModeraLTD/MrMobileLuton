@@ -68,6 +68,18 @@ body {
 	text-align: center;
 }
 
+#main .buttons .buttonContainer {
+	transition: 1s ease;
+	position: relative;
+	bottom: 0;
+	opacity: 1;
+}
+
+#main .buttons .buttonContainer.inactive {
+	bottom: 50px;
+	opacity: 0;
+}
+
 #main .buttons .buttonContainer button {
 	height: 50px;
 	font-family: ModernSans;

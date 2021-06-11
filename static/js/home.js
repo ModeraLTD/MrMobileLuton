@@ -89,6 +89,10 @@ $(document).ready(function() {
 		handleScroll(scroll);
 	});
 
+	setTimeout(function() {
+		$(".buttonContainer").removeClass("inactive");
+	}, 1500);
+
 	flashFast();
 	setupQuotes();
 	updateQuotes(false);
