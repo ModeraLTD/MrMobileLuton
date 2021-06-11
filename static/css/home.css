@@ -285,6 +285,18 @@ body {
 	margin-right: 0;
 	font-size: 60px;
 	animation: float-noshadow-weak 6s ease-in-out infinite;
+	transition: right 1s ease, opacity 2s ease;
+}
+
+#reviews .paddingcontainer .slidein {
+	position: relative;
+	right: 0;
+	opacity: 1;
+}
+
+#reviews .paddingcontainer .slidein.inactive {
+	opacity: 0;
+	right: 800px;
 }
 
 #reviews .paddingcontainer .quote {
@@ -296,6 +308,11 @@ body {
 	border-radius: 20px;
 
 	position: relative;
+	transition: 1s ease;
+}
+
+#reviews .paddingcontainer .quote.inactive {
+	opacity: 0;
 }
 
 #reviews .paddingcontainer .quote h2 {

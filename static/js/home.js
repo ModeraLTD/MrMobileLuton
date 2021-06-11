@@ -49,6 +49,12 @@ function handleScroll(scroll) {
 		}
 	}
 
+	if (!reviews_visible && (scroll >= 1680)) {
+		reviews_visible = true;
+		$(".quote").removeClass("inactive");
+		$(".slidein").removeClass("inactive");
+	}
+
 	handleBgBlur(Math.ceil(scroll / 10) * 10);
 }
 
@@ -161,6 +167,7 @@ function updateQuotes(flash) {
 
 cs_visible = false;
 repair_visible = false;
+reviews_visible = false;
 
 currentBlur = 0;
 quotesIndex = 0;
