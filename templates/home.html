@@ -103,12 +103,12 @@
 		</div>
 	</div>
 
-	<div class="waveDispl flipped" style="background-color: rgb(191, 197, 201);"></div>
+	<div class="waveDispl flipped" style="background-color: rgb(191, 197, 201); z-index: 2;"></div>
 
 	<!-- Repair details section -->
 	<div class="section" id="repairDetails">
-		<h1>Repair services are available for:</h1>
-		 <div class="grid">
+		<h1 class="dropin inactive">Repair services are available for:</h1>
+		 <div class="grid fadeinrepair inactive">
 			<div class="col">
 				 <!-- empty for formatting -->
 	 		</div>
@@ -133,6 +133,39 @@
 				<h2>Screen replacement</h2>
 			</div>
 		 </div>
+	</div>
+
+	<!-- Review section -->
+	<div class="section" id="reviews">
+		<div class="paddingcontainer">
+			<h1>Don't take it from us..<br />let our customers tell you!</h1>
+			<div class="quote">
+				<div class="flashdiv">
+					<h2 class="quotemark startquote">"</h2>
+					<h2 id="quote">hi there</h2>
+					<h2 class="quotemark endquote">"</h2>
+					<h2 id="author">Author name</h2>
+					<div class="rating">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</div>
+				</div>
+
+				<div class="bar">
+					<div class="buttonContainer">
+						<button onclick="changeQuotes(-1)">◄</button>
+					</div>
+					<div class="dotContainer">
+					</div>
+					<div class="buttonContainer">
+						<button onclick="changeQuotes(1)">►</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

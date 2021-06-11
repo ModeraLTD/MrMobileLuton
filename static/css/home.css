@@ -40,11 +40,26 @@ body {
 	color: var(--dark);
 }
 
+@keyframes float-noshadow-moderate {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
 #main h1 {
-	font-size: 80px;
+	font-family: 'Evogria';
+	font-size: 90px;
+	color: linear-gradient(to right, #121FCF 0%, #3CB2CF 100%);;
 	margin-bottom: 5px;
 	margin-top: 0px;
-	padding-top: 50px;
+	padding-top: 100px;
+	animation: float-noshadow-moderate 6s ease-in-out infinite;
 }
 
 #main .buttons {
@@ -82,6 +97,7 @@ body {
 	width: 100%;
 	height: 630px;
 	background-color: white;
+	z-index: 2;
 }
 
 #guarantee .content {
@@ -139,7 +155,7 @@ body {
 
 /* Flash fast */
 .flashfast {
-	transition: color 0.5s ease-out;
+	transition: color 0.3s ease-out;
 }
 
 .flashfast.lightUp {
@@ -166,7 +182,11 @@ body {
 /* ------- REPAIR DETAILS ------- */
 #repairDetails {
 	height: 500px;
-	background-color: rgb(191, 197, 201);
+	background: rgb(191,197,201);
+	background: -moz-linear-gradient(180deg, rgba(191,197,201,1) 78%, rgba(165,223,232,0) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(191,197,201,1) 78%, rgba(165,223,232,0) 100%);
+	background: linear-gradient(180deg, rgba(191,197,201,1) 78%, rgba(165,223,232,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bfc5c9",endColorstr="#a5dfe8",GradientType=1);
 }
 
 #repairDetails h1 {
@@ -174,6 +194,15 @@ body {
 	font-size: 60px;
 	margin-top: 0;
 	padding-top: 50px;
+	position: relative;
+	bottom: 0;
+	transition: 1s ease;
+	opacity: 1;
+}
+
+#repairDetails h1.inactive {
+	bottom: 150px;
+	opacity: 0;
 }
 
 #repairDetails .grid {
@@ -181,6 +210,16 @@ body {
 	width: 100%;
 	height: 340px;
 	grid-template-columns: 20% 20% 20% 20% 20%;
+
+	position: relative;
+	bottom: 0;
+	opacity: 1;
+	transition: 1s ease;
+}
+
+#repairDetails .grid.inactive {
+	bottom: -80px;
+	opacity: 0;
 }
 
 #repairDetails .grid .col {
@@ -208,10 +247,192 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	transition: 0.2s ease;
+	animation: float-noshadow 6s ease-in-out infinite;
+}
+
+@keyframes float-noshadow {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
 #repairDetails .grid .col h2 {
 	font-size: 40px;
 	margin-top: 0px;
 	transition: 0.2s ease;
+}
+
+/* ------- REPAIR DETAILS END ------- */
+
+/* ------- REVIEWS ------- */
+#reviews {
+	height: 550px;
+}
+
+#reviews .paddingcontainer {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+}
+
+#reviews .paddingcontainer h1 {
+	margin-right: 0;
+	font-size: 60px;
+	animation: float-noshadow-weak 6s ease-in-out infinite;
+}
+
+#reviews .paddingcontainer .quote {
+	width: 50%;
+	height: 250px;
+	float: left;
+
+	border: 1px solid rgb(82, 93, 113);
+	border-radius: 20px;
+
+	position: relative;
+}
+
+#reviews .paddingcontainer .quote h2 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#reviews .paddingcontainer .quote .quotemark {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#reviews .paddingcontainer .quote .startquote {
+	text-align: left;
+	padding-top: 20px;
+	line-height: 0.3;
+}
+
+#reviews .paddingcontainer .quote .endquote {
+	text-align: right;
+	padding-right: 40px;
+}
+
+#quote {
+	padding-left: 30px;
+	padding-right: 30px;
+	font-style: italic;
+	text-align: left;
+	margin: none;
+}
+
+#author::before {
+	content: '- ';
+}
+
+#author {
+	padding-left: 50px;
+	text-align: left;
+	text-shadow: 0 1px 0 var(--dark), 0 2px 0 var(--dark);
+	float: left;
+}
+
+#reviews .paddingcontainer .quote .rating {
+	float: left;
+
+    padding-left: 15px;
+    font-size: 10px;
+    padding-top: 4px;
+	animation: float-noshadow-weak 6s ease-in-out infinite;
+}
+
+@keyframes float-noshadow-weak {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-4px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+#reviews .paddingcontainer .quote .rating .fa.fa-star {
+	font-size: 20px;
+}
+
+#reviews .paddingcontainer .quote .bar {
+	position: absolute;
+	bottom: 0;
+
+	width: 100%;
+	height: 40px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top: 1px solid rgb(82, 93, 113);
+	background-color: rgba(154, 154, 154, 0.62);
+
+	display: grid;
+	grid-template-columns: 40px calc(100% - 80px) 40px;
+}
+
+#reviews .paddingcontainer .quote .bar .buttonContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#reviews .paddingcontainer .quote .bar .buttonContainer button {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	padding-left: 0;
+	padding-right: 0;
+
+	background-color: var(--white);
+	color: var(--dark);
+	font-family: 'ModernSans';
+	font-size: 16px;
+
+	outline: none;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+
+	margin-top: 4px;
+	transition: 0.2s ease;
+}
+
+#reviews .paddingcontainer .quote .bar .buttonContainer button:hover {
+	background-color: #cdccb8;
+}
+
+#reviews .paddingcontainer .quote .bar .dotContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#reviews .paddingcontainer .quote .bar .dotContainer div {
+	background-color: rgb(46, 54, 69);
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: auto;
+	margin-bottom: auto;
+	transition: 0.5s ease;
+	border: 1px solid rgb(46, 54, 69);
+}
+
+#reviews .paddingcontainer .quote .bar .dotContainer div.active {
+	background-color: rgb(108, 127, 159);
+	border: 1px solid rgba(79, 255, 112, 0.05);
+}
+/* ------- REVIEWS END ------- */
+
+/* ------- PRODUCTS ------- */
+#products {
+	height: 400px;
 }

@@ -41,41 +41,15 @@ function handleScroll(scroll) {
 		}
 	}
 
+	if (!repair_visible) {
+		if (scroll >= 1200) {
+			repair_visible = true;
+			$("#repairDetails .dropin").removeClass("inactive");
+			$("#repairDetails .fadeinrepair").removeClass("inactive");
+		}
+	}
+
 	handleBgBlur(Math.ceil(scroll / 10) * 10);
-}
-
-function updateQuotes(d) {
-	quotesIndex += d;
-	max = quotes.length - 1;
-
-	if (quotesIndex > max) {
-		quotesIndex = 0;
-	} else if (quotesIndex < 0) {
-		quotesIndex = max;
-	}
-
-	_updateQuotes(true);
-}
-
-function _updateQuotes(flash) {
-	author = quotes[quotesIndex][0];
-	quote = quotes[quotesIndex][1];
-
-	if (flash && !switchingQuotes) {
-		switchingQuotes = true;
-		$(".quotes").fadeOut(200);
-		setTimeout(function() {
-			$("#author").text(author);
-			$("#quote").text(quote);
-			$(".quotes").fadeIn(200);
-			setTimeout(function() {
-				switchingQuotes = false;
-			}, 200);
-		}, 200);
-	} else {
-		$("#author").text(author);
-		$("#quote").text(quote);
-	}
 }
 
 // Fast flashing green
@@ -93,7 +67,7 @@ function flashFast() {
 		if (index > maxcharslen) {
 			index = 0;
 			chars[chars.length - 1].removeClass("lightUp");
-			setTimeout(lightUp, 1000, chars, index);
+			setTimeout(lightUp, 500, chars, index);
 			return;
 		}
 
@@ -105,7 +79,7 @@ function flashFast() {
 			}
 		}
 
-		setTimeout(lightUp, 200, chars, index + 1);
+		setTimeout(lightUp, 100, chars, index + 1);
 	}
 
 	lightUp(chars, 0);
@@ -121,11 +95,73 @@ $(document).ready(function() {
 		handleScroll(scroll);
 	});
 
-	_updateQuotes(false);
 	flashFast();
+	setupQuotes();
+	updateQuotes(false);
+
 });
 
+function setupQuotes() {
+	single = "<div></div>\n"
+	$(".dotContainer").append(single.repeat(quotes.length));
+}
+
+function changeQuotes(n) {
+	if (!switchingQuotes) {
+		quotesIndex += n;
+		max = quotes.length-1;
+
+		if (quotesIndex > max) {
+			quotesIndex = 0;
+		} else if (quotesIndex < 0) {
+			quotesIndex = max;
+		}
+
+		updateQuotes(true);
+	}
+}
+
+function updateQuotes(flash) {
+	author = quotes[quotesIndex][0];
+	quote = quotes[quotesIndex][1];
+
+	function setButton() {
+		children = $(".dotContainer").children();
+		for (i in children) {
+			if (i == quotesIndex) {
+				$(children[i]).addClass("active");
+			} else {
+				$(children[i]).removeClass("active");
+			}
+		}
+	}
+
+	function setText(author, quote) {
+		$("#author").text(author);
+		$("#quote").text(quote);
+		setButton();
+	}
+
+	if (flash && !switchingQuotes) {
+		switchingQuotes = true;
+		$(".flashdiv").fadeOut(200);
+		setTimeout(function() {
+			setText(author, quote);
+			$(".flashdiv").fadeIn(500);
+
+			setTimeout(
+				function() {switchingQuotes = false;},
+				200
+			);
+		}, 200);
+	} else if (!flash) {
+		setText(author, quote);
+	}
+}
+
 cs_visible = false;
+repair_visible = false;
+
 currentBlur = 0;
 quotesIndex = 0;
 switchingQuotes = false;
@@ -154,5 +190,5 @@ quotes = [
 ];
 
 const blurScrollMax = 400;
-const blurPxMax = 8;
+const blurPxMax = 12;
 const changeThreshold = 1;
