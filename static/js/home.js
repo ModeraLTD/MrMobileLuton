@@ -20,36 +20,24 @@ function handleScroll(scroll) {
 	if (!cs_visible) {
 		if (scroll >= 300) {
 			cs_visible = true;
-			$(".contentSection").removeClass("inactive");
-
-			console.log("Here");
+			$(".inactiveLeft").removeClass("inactiveLeft");
+			$(".inactiveRight").removeClass("inactiveRight");
 
 			setTimeout(function() {
-				stars = $(".rating").children();
-				console.log(stars);
-				function showStars(stars, index) {
-					console.log(index);
-					if (index < (stars.length)) {
-						setTimeout(showStars, 200, stars, index + 1);
-						$(stars[index]).fadeIn(500);
-					}
-				}
-
-				showStars(stars, 0);
-
-			}, 1000);
+				$(".inactiveFade").removeClass("inactiveFade");
+			}, 500);
 		}
 	}
 
 	if (!repair_visible) {
-		if (scroll >= 1200) {
+		if (scroll >= 840) {
 			repair_visible = true;
 			$("#repairDetails .dropin").removeClass("inactive");
 			$("#repairDetails .fadeinrepair").removeClass("inactive");
 		}
 	}
 
-	if (!reviews_visible && (scroll >= 1680)) {
+	if (!reviews_visible && (scroll >= 1380)) {
 		reviews_visible = true;
 		$(".quote").removeClass("inactive");
 		$(".slidein").removeClass("inactive");
@@ -145,12 +133,12 @@ function updateQuotes(flash) {
 	function setText(author, quote) {
 		$("#author").text(author);
 		$("#quote").text(quote);
-		setButton();
 	}
 
 	if (flash && !switchingQuotes) {
 		switchingQuotes = true;
 		$(".flashdiv").fadeOut(200);
+		setButton();
 		setTimeout(function() {
 			setText(author, quote);
 			$(".flashdiv").fadeIn(500);
@@ -162,6 +150,7 @@ function updateQuotes(flash) {
 		}, 200);
 	} else if (!flash) {
 		setText(author, quote);
+		setButton();
 	}
 }
 

@@ -95,62 +95,45 @@ body {
 /* ------- GUARANTEE ------- */
 #guarantee {
 	width: 100%;
-	height: 630px;
+	height: 370px;
 	background-color: white;
 	z-index: 2;
 }
 
 #guarantee .content {
-	height: 500px;
 	width: calc(100% - 100px);
-	padding-top: 80px;
-	padding-bottom: 50px;
+	height: 100%;
 	padding-left: 50px;
 	padding-right: 50px;
-	column-count: 2;
+
+	display: grid;
+	grid-template-columns: 25% 50% 25%;
+	text-align: center;
 }
 
-#guarantee .content .contentSection:first-child {float: left;}
-#guarantee .content .contentSection:last-child {float: right;}
-
-/* Transitioning */
-#guarantee .content .contentSection.inactive {opacity: 0;}
-#guarantee .content .contentSection:first-child.inactive {margin-left: -500px;}
-#guarantee .content .contentSection:last-child.inactive {margin-right: -500px;}
-
-#guarantee .content .contentSection {
-	height: 100%;
-    width: 90%;
-
-	padding-left: 15px;
-	padding-right: 15px;
+#guarantee .content .col {
+	text-align: center;
+	position: relative;
 	opacity: 1;
-
-	transition: margin-left 1s ease, margin-right 1s ease, opacity 1.5s ease;
+	left: 0;
+	transition: opacity 1s ease, right 1s ease, left 1s ease;
 }
 
-#guarantee .content .contentSection h1 {
-	font-family: 'Evogria';
-	font-size: 80px;
-	letter-spacing: 5px;
-	line-height: 8s0px;
-	color: var(--shade);
-	text-shadow: 0 1px 0 var(--dark), 0 2px 0 var(--dark);
-	float: left;
-}
+#guarantee .content .col.inactiveFade {opacity: 0;}
+#guarantee .content .col.inactiveLeft {left: -400px;}
+#guarantee .content .col.inactiveRight {left: 400px;}
 
-#guarantee .content .contentSection .imgwrapper .img {
-	float: right;
-	display: block;
-	max-width: 290px;
-	max-height: 500px;
+#guarantee .content .col img {
+	max-width: 100%;
 	width: auto;
 	height: auto;
+	animation: float-noshadow 6s ease-in-out infinite;
 }
 
-#guarantee .content .contentSection.left .imgwrapper {
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+#guarantee .content .col h1 {
+	font-family: 'Evogria';
+	font-size: 80px;
+	word-wrap: break-word;
 }
 
 /* Flash fast */
@@ -279,6 +262,7 @@ body {
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-top: 50px;
+	text-align: center;
 }
 
 #reviews .paddingcontainer h1 {
@@ -302,13 +286,15 @@ body {
 #reviews .paddingcontainer .quote {
 	width: 50%;
 	height: 250px;
-	float: left;
 
 	border: 1px solid rgb(82, 93, 113);
 	border-radius: 20px;
 
 	position: relative;
 	transition: 1s ease;
+
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #reviews .paddingcontainer .quote.inactive {

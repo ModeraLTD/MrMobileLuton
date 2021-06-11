@@ -14,11 +14,13 @@
 	home.css:			Stylesheet for this page
 	wave.css:			Stylesheet for the wave
 	waveDisplaced.css:	Stylesheet for the wave not at the bottom of the page
+	speedo.css:			Speedometer
 	-->
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/wave.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/waveDisplaced.css')}}" />
+	<!--<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/speedo.css')}}" />-->
 </head>
 
 <body>
@@ -58,48 +60,15 @@
 	<!-- Guarantee section + reviews -->
 	<div class="section" id="guarantee">
 		<div class="content">
-			<div class="contentSection left inactive">
-				<div class="imgwrapper">
-					<img src="{{ url_for('static', filename='css/imgs/repair.png')}}" class="img" />
-				</div>
+			<div class="col inactiveLeft">
+				<img src="{{ url_for('static', filename='css/imgs/guarantee.png')}}" />
 			</div>
-			<div class="contentSection right inactive">
-				<h1>GUARANTEED<br /><span class="flashfast" id="fast-0">F</span><span class="flashfast" id="fast-1">A</span><span class="flashfast" id="fast-2">S</span><span class="flashfast" id="fast-3">T</span><br />REPAIR</h1>
+			<div class="col inactiveFade">
+				<h1>GUARANTEED <span class="flashfast" id="fast-0">F</span><span class="flashfast" id="fast-1">A</span><span class="flashfast" id="fast-2">S</span><span class="flashfast" id="fast-3">T</span> REPAIRS</h1>
 			</div>
-			<!--<div class="contentSection right inactive">
-				<h2 class="title">We are rated <span class="thick">5 stars</span> on Google Reviews</h2>
-				<div class="rating">
-					<span class="fa fa-star checked" style="display: none;"></span>
-					<span class="fa fa-star checked" style="display: none;"></span>
-					<span class="fa fa-star checked" style="display: none;"></span>
-					<span class="fa fa-star checked" style="display: none;"></span>
-					<span class="fa fa-star checked" style="display: none;"></span>
-				</div>
-
-				<div class="reviews">
-					<div class="buttonWrapper">
-						<button onclick="updateQuotes(-1);">◄</button>
-					</div>
-					<div class="quotes">
-						<h2 id="author">Author name</h2>
-						<div class="quoteContainer">
-							<h3 class="startquote">"</h3>
-							<h3 id="quote">quotequotequotequotequotequotequotequote</h3>
-							<h3 class="endquote">"</h3>
-						</div>
-						<div class="ratingQuotes">
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-						</div>
-					</div>
-					<div class="buttonWrapper">
-						<button onclick="updateQuotes(1);">►</button>
-					</div>
-				</div>
-			</div>-->
+			<div class="col inactiveRight">
+				<img src="{{ url_for('static', filename='css/imgs/speed.png')}}" />
+			</div>
 		</div>
 	</div>
 

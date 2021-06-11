@@ -1,0 +1,46 @@
+.speedo {
+	width: 140px;
+	height: 90px;
+	margin: 100px auto 30px auto;
+	overflow: hidden;
+}
+
+.face {
+	width: 200px;
+	height: 200px;
+	border: solid 40px black;
+	border-radius: 50%;
+	position: relative;
+}
+
+.needle {
+	width: 5px;
+	height: 80px;
+	background: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 100%;
+	display: inline-block;
+	left: 55px;
+	position: absolute;
+	top: -33px;
+	transform-origin: bottom;
+}
+
+.fast {
+	-webkit-animation: fast 2s;
+	transform: rotate(50deg);
+}
+
+@-webkit-keyframes fast {
+	0% {
+		transform: rotate(-90deg);
+	}
+	50% {
+		transform: rotate(60deg);
+	}
+	100% {
+		transform: rotate(50deg);
+	}
+}
