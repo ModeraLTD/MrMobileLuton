@@ -35,10 +35,16 @@ body {
 	height: calc(100% - 80px);
 }
 
-#main h1, h2 {
+#main h1,h2{
 	text-align: center;
 	color: black;
-	font-family: 'Evogria';
+	font-family: 'freshman';
+}
+
+#main h2{
+	text-align: center;
+	color: black;
+	font-family: "Evogria";
 }
 
 @keyframes float-noshadow-moderate {
@@ -459,7 +465,7 @@ body {
 
 #products .reveal {
 	padding-top: 150px;
-	font-family: 'ModernSans';
+	font-family: 'Evogria';
 	font-size: 40px;
 	text-align: center;
 	position: relative;
@@ -524,8 +530,8 @@ body {
 }
 
 #footer .content .col {
-	font-family: 'ModernSans';
-	color: white;
+	font-family: 'freshman';
+	color: Blue;
 	letter-spacing: 2px;
 	position: relative;
 }
@@ -540,12 +546,15 @@ body {
 	width: 100%;
 	margin-bottom: 0px;
 	right: 45px;
+	font-family: 'ModernSans';
 }
 
 #contactDetails {
 	display: grid;
 	padding-top: 40px;
 	grid-template-columns: 50% 50%;
+	font-family: 'ModernSans';
+	color: white;
 }
 
 #contactDetails .detail img {
@@ -568,6 +577,7 @@ body {
 	grid-template-columns: 20% 20% 20% 20%;*/
 	padding-left: 50px;
 	padding-right: 50px;
+	font-family: 'ModernSans';
 }
 
 #links a {
