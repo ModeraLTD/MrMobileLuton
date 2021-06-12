@@ -157,6 +157,8 @@ body {
 /* Flash fast */
 .flashfast {
 	transition: color 0.3s ease-out;
+	font-family: 'Hunger Games';
+	font-weight: lighter;
 }
 
 .flashfast.lightUp {
@@ -531,7 +533,8 @@ body {
 
 #footer .content .col {
 	font-family: 'freshman';
-	color: Blue;
+	font-weight: normal;
+	color: rgb(152, 152, 152);
 	letter-spacing: 2px;
 	position: relative;
 }
