@@ -15,14 +15,14 @@
 	wave.css:			Stylesheet for the wave
 	waveDisplaced.css:	Stylesheet for the wave not at the bottom of the page
 	reveal.css:			Revealing text
-	speedo.css:			Speedometer
+	popup.css:			Stylesheet for the popup
 	-->
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/wave.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/waveDisplaced.css')}}" />
 	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/reveal.css')}}" />
-	<!--<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/speedo.css')}}" />-->
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/popup.css')}}" />
 </head>
 
 <body>
@@ -146,8 +146,8 @@
 			<div class="cover hidden"></div>
 		</div>
 		<div class="buttonContainer">
-			<button onclick="open('apple');" class="slideinLeft">APPLE</button>
-			<button onclick="open('samsung');" class="slideinRight">SAMSUNG</button>
+			<button onclick="openPopup('apple');" class="slideinLeft">APPLE</button>
+			<button onclick="openPopup('samsung');" class="slideinRight">SAMSUNG</button>
 		</div>
 	</div>
 
@@ -178,6 +178,40 @@
 				<a href="{{url_for('home')}}">Home</a>
 				</div>
 				<h4 class="rights">Copyright © 2021 MrMobile. All Rights Reserved</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-apple" style="display: none;">
+		<div class="box">
+			<div class="content">
+				<button class="exit" onclick="closePopup('apple')">x</button>
+				<h1>Apple products</h1>
+				<div class="products" style="
+				    display: grid;
+				    grid-template-columns: 20% 20% 20% 20% 20%;
+				    grid-template-rows: 50% 50%;
+				    height: calc(100% - 100px);
+				    width: 100%;
+					text-align: center;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-samsung" style="display: none;">
+		<div class="box">
+			<div class="content">
+				<button class="exit" onclick="closePopup('samsung')">x</button>
+				<h1>Samsung products</h1>
+				<div class="products" style="
+				    display: grid;
+				    grid-template-columns: 20% 20% 20% 20% 20%;
+				    grid-template-rows: 50% 50%;
+				    height: calc(100% - 100px);
+				    width: 100%;
+					text-align: center;">
+				</div>
 			</div>
 		</div>
 	</div>

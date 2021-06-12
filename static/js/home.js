@@ -106,8 +106,32 @@ $(document).ready(function() {
 	flashFast();
 	setupQuotes();
 	updateQuotes(false);
-
+	addProducts();
 });
+
+function addProducts() {
+	applehtml = "";
+	samsunghtml = "";
+
+	for (i in products["apple"]) {
+		applehtml += `<div class="product">
+			<img src="${products["apple"][i]["img"]}">
+			<h2 class="name">${products["apple"][i]["name"]}</h2>
+			<h3 class="cost">${products["apple"][i]["cost"]}</h3>
+		</div>`;
+	}
+
+	for (i in products["samsung"]) {
+		samsunghtml += `<div class="product">
+			<img src="${products["samsung"][i]["img"]}">
+			<h2 class="name">${products["samsung"][i]["name"]}</h2>
+			<h3 class="cost">${products["samsung"][i]["cost"]}</h3>
+		</div>`;
+	}
+
+	$("#popup-apple .box .content .products").append(applehtml);
+	$("#popup-samsung .box .content .products").append(samsunghtml);
+}
 
 function setupQuotes() {
 	single = "<div></div>\n"
@@ -168,6 +192,17 @@ function updateQuotes(flash) {
 	}
 }
 
+function openPopup(popup) {
+	$(`#popup-${popup}`).stop().fadeTo(200, 1);
+}
+
+function closePopup(popup) {
+	$(`#popup-${popup}`).stop().fadeTo(100, 0);
+	setTimeout(function() {
+		$(`#popup-${popup}`).hide();
+	}, 300);
+}
+
 cs_visible = false;
 repair_visible = false;
 reviews_visible = false;
@@ -199,6 +234,113 @@ quotes = [
 		"Positive: Professionalism"
 	]
 ];
+
+products = {
+	"apple": [
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		}
+	],
+	"samsung": [
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		},
+		{
+			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
+			"name": "Sample product",
+			"cost": "0.00"
+		}
+	]
+}
 
 const blurScrollMax = 400;
 const blurPxMax = 12;
