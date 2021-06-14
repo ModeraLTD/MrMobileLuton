@@ -18,9 +18,14 @@ def about():
     return ""
 
 
-@app.route("/services")
-def services():
-    return render_template("services.html")
+@app.route("/products")
+def products():
+    return render_template("products.html")
+
+
+@app.route("/repairs")
+def repairs():
+    return render_template("repairs.html")
 
 
 @app.route("/contact")
