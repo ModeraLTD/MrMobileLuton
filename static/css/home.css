@@ -339,6 +339,7 @@ body {
 	font-style: italic;
 	text-align: left;
 	margin: none;
+	font-family: 'Evogria';
 }
 
 #author::before {
