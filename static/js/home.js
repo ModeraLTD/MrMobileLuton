@@ -89,32 +89,12 @@ function flashFast() {
 	lightUp(chars, 0);
 }
 
-// When the page loads
-$(document).ready(function() {
-	$(".fadein").hide();
-	$(".fadein").fadeIn(1500).show();
-
-	$(window).scroll(function (event) {
-		var scroll = $(window).scrollTop();
-		handleScroll(scroll);
-	});
-
-	setTimeout(function() {
-		$(".buttonContainer").removeClass("inactive");
-	}, 1500);
-
-	flashFast();
-	setupQuotes();
-	updateQuotes(false);
-	addProducts();
-});
-
 function addProducts() {
 	applehtml = "";
 	samsunghtml = "";
 
 	for (i in products["apple"]) {
-		applehtml += `<div class="product">
+		applehtml += `<div class="product apple">
 			<img src="${products["apple"][i]["img"]}">
 			<h2 class="name">${products["apple"][i]["name"]}</h2>
 			<h3 class="cost">${products["apple"][i]["cost"]}</h3>
@@ -122,7 +102,7 @@ function addProducts() {
 	}
 
 	for (i in products["samsung"]) {
-		samsunghtml += `<div class="product">
+		samsunghtml += `<div class="product samsung">
 			<img src="${products["samsung"][i]["img"]}">
 			<h2 class="name">${products["samsung"][i]["name"]}</h2>
 			<h3 class="cost">${products["samsung"][i]["cost"]}</h3>
@@ -202,6 +182,35 @@ function closePopup(popup) {
 		$(`#popup-${popup}`).hide();
 	}, 300);
 }
+
+// When the page loads
+$(document).ready(function() {
+	$(".fadein").hide();
+	$(".fadein").fadeIn(1500).show();
+
+	$(window).scroll(function (event) {
+		var scroll = $(window).scrollTop();
+		handleScroll(scroll);
+	});
+
+	setTimeout(function() {
+		$(".buttonContainer").removeClass("inactive");
+	}, 1500);
+
+	flashFast();
+	setupQuotes();
+	updateQuotes(false);
+	addProducts();
+
+	$(".product.apple").click(function() {
+		window.open("products?tab=apple");
+	});
+
+	$(".product.samsung").click(function() {
+		window.open("products?tab=samsung");
+	});
+
+});
 
 cs_visible = false;
 repair_visible = false;
