@@ -9,11 +9,18 @@ body .container {
 body .container .col {
 }
 
+/*
+   Navigation
+   Note that this is the left navigation
+   rather than the top navigation bar.
+*/
+
 body .container .col.nav {
 	background-color: var(--white);
 	box-shadow: 0 4px 15px -2px black;
 	z-index: 1;
 	font-size: 26px;
+	position: fixed;
 }
 
 body .container .col.page {
@@ -110,4 +117,21 @@ body .container .col.nav .onhover:hover .phoneshover {
 .revealhover .company:hover {
 	padding-left: 50px;
 	background-color: #d5d4bb;
+}
+
+/*
+   Main page
+   Contains all the offers
+*/
+.col.page h1 {
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 40px;
+}
+
+.products {
+	width: calc(100% - 100px);
+	height: 100vh;
+	padding-left: 50px;
+	padding-right: 50px;
 }
