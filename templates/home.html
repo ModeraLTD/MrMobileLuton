@@ -29,13 +29,13 @@
 
 <body>
 	<!-- Background image is located below -->
-	<img src="https://lh3.googleusercontent.com/p/AF1QipOtxJ5ZEem_S47e_EpRAhtQDR2eBOTFHCRsqSFn=w573-h573-p-no" id="bgimg" />
+	<img src="{{ url_for('static', filename='css/imgs/bg.jpg' )}}" id="bgimg" />
 
 	<!-- Navigation bar -->
 	<div class="navbar">
 		<div class="buttons">
 			<a href="#" class="logo">
-				<img border="0" class="logo_img" alt="MrMobile logo" src="{{ url_for('static', filename='imgs/logo.png' )}}" />
+				<img border="0" class="logo_img" alt="MrMobile logo" src="{{ url_for('static', filename='css/imgs/logo.png' )}}" />
 			</a>
 			<a href="contact">Contact us</a>
 			<a href="services#products">Products</a>
