@@ -110,7 +110,7 @@
 }
 
 .popup .box .content .products .product h3::before {
-	content: '$';
+	content: '£';
 }
 
 .popup .box .content .products .product h3 {
