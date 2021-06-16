@@ -40,12 +40,12 @@
 	<div class="container">
 		<div class="col nav">
 			<div class="onhover">
-				<div class="cover"><h2>Menu</h2></div>
-				<div class="navitem phoneshover"><h3>Phones</h3></div>
+				<div class="cover noselect"><h2>Menu</h2></div>
+				<div class="navitem phoneshover noselect"><h3>Phones</h3></div>
 				<div class="revealhover">
-					<div class="company" id="phones-apple"><h4>Apple</h4></div>
-					<div class="company" id="phones-samsung"><h4>Samsung</h4></div>
-					<div class="company"><h4>Example company</h4></div>
+					<div class="company noselect" id="phones-apple"><h4>Apple</h4></div>
+					<div class="company noselect" id="phones-samsung"><h4>Samsung</h4></div>
+					<div class="company noselect"><h4>Example company</h4></div>
 				</div>
 			</div>
 			<div class="navitem solo" style="cursor: pointer;" id="accessories"><h3>Accessories</h3></div>
@@ -53,43 +53,8 @@
 		<div class="col navspace"></div>
 		<div class="col page">
 			<h1 class="toptext unspaced">POPULAR CHOICES</h1>
-			<h3 class="toptext unspaced tab">APPLE</h3>
+			<h3 class="toptext unspaced tab">UNSELECTED</h3>
 			<div class="products">
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
-				<div class="product">
-					<img src="{{ url_for('static', filename='css/imgs/placeholder-product.png') }}"/>
-					<h2 class="name">Example product</h2>
-					<h2 class="cost">£0.00</h2>
-				</div>
 			</div>
 		</div>
 	</div>

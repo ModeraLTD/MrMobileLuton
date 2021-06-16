@@ -165,8 +165,9 @@ body .container .col.nav .onhover:hover .phoneshover {
 
 .col.page .tab {
 	text-align: center;
-	font-size: 24px;
-	margin-top: 0;
+	font-size: 28px;
+	margin-top: 14px;
+	margin-bottom: 14px;
 	color: rgba(0, 0, 0, 0.66);
 }
 
@@ -223,5 +224,14 @@ body .container .col.nav .onhover:hover .phoneshover {
 }
 
 .products .product .cost {
+	position: absolute;
 	font-size: 26px;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	color: rgb(84, 194, 78);
+}
+
+.products .product .cost::before {
+	content: '£';
 }
