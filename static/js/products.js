@@ -19,9 +19,9 @@ $(document).ready(function() {
 		fadeOutPage();
 		setTimeout(function() {
 			addProducts(products["apple"]);
-			renameTabname("apple");
-			fadeInPage();
 			spaceOutTab();
+			renameTabname("apple");
+			setTimeout(fadeInPage, 400);
 		}, 400);
 	});
 
