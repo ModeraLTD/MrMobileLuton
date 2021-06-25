@@ -6,18 +6,20 @@
 	<!-- Scripts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="{{ url_for('static', filename='js/products.js')}}"></script>
+	<script src="{{url_for('static', filename='lib/alertifyjs/alertify.min.js' )}}"></script>
+	<script src="{{url_for('static', filename='js/contact.js')}}"></script>
 
 	<!--
 	Stylesheets
 	general.css: 		In all pages, contains navigation bar & other details
 	products.css:		Stylesheet for this page
 	scrollbar.css:		Stylesheet for customising the scrollbar
-	roboto-fontface.css:Roboto font
 	-->
-	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
-	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/contact.css')}}" />
-	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/scrollbar.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{url_for('static', filename='css/general.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{url_for('static', filename='css/contact.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{url_for('static', filename='css/scrollbar.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{url_for('static', filename='lib/alertifyjs/css/alertify.min.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{url_for('static', filename='lib/alertifyjs/css/themes/default.min.css')}}" />
 </head>
 
 <body>
@@ -38,11 +40,42 @@
 	<!-- Main website -->
 	<div class="content">
 		<h1>Contact us</h1>
-		<form>
-			<div class="labelcontainer">
-				<label for="fname">Email address:</label>
+		<div id="contact-form">
+			<div class="grid">
+				<div class="labelcontainer">
+					<label for="email">Email address:<span class="required">*</span></label>
+				</div>
+				<div class="inputcontainer">
+					<input type="text" id="email" name="email" placeholder="Email address" class="inputtext">
+					<div class="floaterror small" id="email-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
+
+				<div class="labelcontainer">
+					<label for="subject">Subject:<span class="required">*</span></label>
+				</div>
+				<div class="inputcontainer">
+					<input maxlen="50" type="text" id="subject" name="subject" placeholder="i.e Product refund" class="inputtext">
+					<div class="floaterror small" id="subject-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
+
+				<div class="labelcontainer">
+					<label for="body">Body:<span class="required">*</span></label><br />
+					<h2 class="desc">Please be detailed in this <br />description.</h2>
+				</div>
+				<div class="inputcontainer">
+					<textarea maxlen="500" type="text" id="body" name="body" placeholder="Details on the reason of contact" class="inputtext"></textarea>
+					<div class="floaterror large" id="body-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
 			</div>
-			<input type="text" id="fname" name="fname"><br>
+			<div class="submitcontainer">
+				<button id="submit">Submit</button>
+			</div>
 		</form>
 	</div>
 
