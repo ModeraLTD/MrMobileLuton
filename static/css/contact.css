@@ -132,3 +132,86 @@
 	color: red;
 	text-align: left;
 }
+
+/* ------- FOOTER ------- */
+#footer {
+	height: 300px;
+	background-color: #333333;
+	overflow: hidden;
+}
+
+#footer .content {
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 100px;
+	padding-bottom: 80px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+#footer .content .col {
+	font-family: 'freshman';
+	font-weight: normal;
+	color: rgb(152, 152, 152);
+	letter-spacing: 2px;
+	position: relative;
+}
+
+#footer .content .col .rights {
+	color: rgb(152, 152, 152);
+	float: right;
+	font-size: 12px;
+	position: absolute;
+	bottom: 5px;
+	text-align: right;
+	width: 100%;
+	margin-bottom: 0px;
+	right: 45px;
+	font-family: 'ModernSans';
+}
+
+#contactDetails {
+	display: grid;
+	padding-top: 40px;
+	grid-template-columns: 50% 50%;
+	font-family: 'ModernSans';
+	color: white;
+}
+
+#contactDetails .detail img {
+	width: 20px;
+	height: 20px;
+	float: left;
+	-webkit-filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+	filter: sepia(100%) hue-rotate(90deg) saturate(400%);
+}
+
+#contactDetails .detail h4 {
+	float: left;
+	padding-left: 5px;
+	margin-top: 2px;
+	margin-bottom: 0;
+}
+
+#links {
+	/*display: grid;
+	grid-template-columns: 20% 20% 20% 20%;*/
+	padding-left: 50px;
+	padding-right: 50px;
+	font-family: 'ModernSans';
+}
+
+#links a {
+	color: white;
+	text-decoration: none;
+	float: right;
+	transition: 0.2s ease;
+}
+
+#links a:not(:first-child) {
+	margin-right: 30px;
+}
+
+#links a:hover {
+	text-shadow: 0px 0px 2px white;
+}
