@@ -30,7 +30,7 @@ def repairs():
 
 @app.route("/contact")
 def contact():
-    return ""
+    return render_template("contact.html")
 
 
 def main():

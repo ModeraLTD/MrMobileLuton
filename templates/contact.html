@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+	<title>Contact | Mr Mobile Luton</title>
+	<meta charset="UTF-8"/>
+
+	<!-- Scripts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="{{ url_for('static', filename='js/products.js')}}"></script>
+
+	<!--
+	Stylesheets
+	general.css: 		In all pages, contains navigation bar & other details
+	products.css:		Stylesheet for this page
+	scrollbar.css:		Stylesheet for customising the scrollbar
+	roboto-fontface.css:Roboto font
+	-->
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/general.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/contact.css')}}" />
+	<link rel="stylesheet" text="text/css" href="{{ url_for('static', filename='css/scrollbar.css')}}" />
+</head>
+
+<body>
+	<!-- Navigation bar -->
+	<div class="navbar">
+		<div class="buttons">
+			<a href="/" class="logo">
+				<img border="0" class="logo_img" alt="MrMobile logo" src="{{ url_for('static', filename='css/imgs/logo.png' )}}" />
+			</a>
+			<a href="#" class="active">Contact us</a>
+			<a href="products">Products</a>
+			<a href="repairs">Repairs</a>
+			<a href="/">Home</a>
+		</div>
+	</div>
+	<div class="navbar-space"></div>
+
+	<!-- Main website -->
+	<div class="content">
+		<h1>Contact us</h1>
+		<form>
+			<div class="labelcontainer">
+				<label for="fname">Email address:</label>
+			</div>
+			<input type="text" id="fname" name="fname"><br>
+		</form>
+	</div>
+
+</body>
+</html>
