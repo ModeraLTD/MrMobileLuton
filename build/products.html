@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+	<title>Services | Mr Mobile Luton</title>
+	<meta charset="UTF-8"/>
+
+	<!-- Scripts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="static/js/products.js"></script>
+
+	<!--
+	Stylesheets
+	general.css: 		In all pages, contains navigation bar & other details
+	products.css:		Stylesheet for this page
+	scrollbar.css:		Stylesheet for customising the scrollbar
+	roboto-fontface.css:Roboto font
+	-->
+	<link rel="stylesheet" text="text/css" href="static/css/general.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/products.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/scrollbar.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/roboto-fontface.css" />
+</head>
+
+<body>
+	<!-- Navigation bar -->
+	<div class="navbar">
+		<div class="buttons">
+			<a href="index.html" class="logo">
+				<img border="0" class="logo_img" alt="MrMobile logo" src="static/css/imgs/logo.png" />
+			</a>
+			<a href="contact.html">Contact us</a>
+			<a href="#" class="active">Products</a>
+			<a href="index.html">Home</a>
+		</div>
+	</div>
+	<div class="navbar-space"></div>
+
+	<!-- Main website -->
+	<div class="container">
+		<div class="col nav">
+			<div class="onhover">
+				<div class="cover noselect"><h2>Menu</h2></div>
+				<div class="navitem phoneshover noselect"><h3>Phones</h3></div>
+				<div class="revealhover">
+					<div class="company noselect" id="phones-apple"><h4>Apple</h4></div>
+					<div class="company noselect" id="phones-samsung"><h4>Samsung</h4></div>
+					<div class="company noselect"><h4>Example company</h4></div>
+				</div>
+			</div>
+			<div class="navitem solo" style="cursor: pointer;" id="accessories"><h3>Accessories</h3></div>
+		</div>
+		<div class="col navspace"></div>
+		<div class="col page">
+			<h1 class="toptext unspaced">POPULAR CHOICES</h1>
+			<h3 class="toptext unspaced tab">UNSELECTED</h3>
+			<div class="products">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

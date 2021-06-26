@@ -1,0 +1,264 @@
+.section {
+	width: 100%;
+	font-family: 'ModernSans';
+}
+
+.checked {
+	color: orange;
+}
+
+.fa.fa-star {
+	font-size: 25px;
+}
+
+body {
+	/*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+					url("imgs/placeholder.jpg");
+	background-repeat: repeat;
+	background-color: red;*/
+}
+
+/* Background */
+#bgimg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -100;
+	opacity: 0.35;
+	transition: 0.2s ease;
+}
+
+/* ------- MAIN ------- */
+#main {
+	width: 100%;
+	/* Remove 80px navbar space */
+	height: calc(100% - 80px);
+}
+
+#main h1, h2 {
+	text-align: center;
+	color: var(--dark);
+}
+
+#main h1 {
+	font-size: 80px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	padding-top: 50px;
+}
+
+#main .buttons {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+#main .buttons .buttonContainer button {
+	height: 50px;
+	font-family: ModernSans;
+	font-weight: bold;
+	font-size: 30px;
+	outline: none;
+	border: 2px solid var(--shade);
+	color: var(--shade);
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 0px 30px;
+	transition: border 0.2s ease;
+	transition: color 0.2s ease;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#main .buttons .buttonContainer button:hover {
+	border: 2px solid var(--mid);
+	color: var(--mid);
+}
+/* ------- MAIN END ------- */
+
+/* ------- GUARANTEE ------- */
+#guarantee {
+	width: 100%;
+	height: 630px;
+	background-color: white;
+}
+
+#guarantee .content {
+	height: 500px;
+	width: calc(100% - 100px);
+	padding-top: 80px;
+	padding-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	column-count: 2;
+}
+
+#guarantee .content .contentSection:first-child {float: left;}
+#guarantee .content .contentSection:last-child {float: right;}
+
+/* Transitioning */
+#guarantee .content .contentSection.inactive {opacity: 0;}
+#guarantee .content .contentSection:first-child.inactive {margin-left: -500px;}
+#guarantee .content .contentSection:last-child.inactive {margin-right: -500px;}
+
+#guarantee .content .contentSection {
+	height: 100%;
+    width: 90%;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	opacity: 1;
+
+	transition: margin-left 1s ease, margin-right 1s ease, opacity 1.5s ease;
+}
+
+#guarantee .content .contentSection h1 {
+	font-family: 'Evogria';
+	font-size: 60px;
+	letter-spacing: 5px;
+	line-height: 8s0px;
+	color: var(--shade);
+	text-shadow: 0 1px 0 var(--dark), 0 2px 0 var(--dark);
+	float: left;
+}
+
+#guarantee .content .contentSection .title {
+	padding-top: 40px;
+	font-size: 40px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+#guarantee .content .contentSection h2 .thick {
+	-webkit-text-stroke: 1px var(--dark);
+}
+
+#guarantee .content .contentSection.left img {
+	width: 150px;
+	height: 256px;
+	float: left;
+	margin-top: 25px;
+	left: -20px;
+}
+
+#guarantee .content .contentSection.left h1 {
+	padding-left: 12px;
+}
+
+#guarantee .content .contentSection .rating {
+	text-align: right;
+}
+
+#guarantee .content .contentSection .reviews {
+	height: 200px;
+	width: 500px;
+	display: grid;
+	grid-template-columns: 50px 400px 50px; /*columns widths*/
+	margin-top: 50px;
+	float: right;
+	border-radius: 10px;
+}
+
+#guarantee .content .contentSection .reviews .buttonWrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#guarantee .content .contentSection .reviews .buttonWrapper button {
+	width: 40px;
+	height: 40px;
+	background-color: var(--light);
+	color: var(--dark);
+	outline: none;
+	text-decoration: none;
+	border: none;
+	border-radius: 100%;
+
+	font-family: 'ModernSans';
+	font-weight: bold;
+	font-size: 20px;
+
+	transition: 0.2s ease, border-style 0s;
+	cursor: pointer;
+}
+
+#guarantee .content .contentSection .reviews .buttonWrapper button:hover {
+	background-color: #9adbbf;
+}
+#guarantee .content .contentSection .reviews .buttonWrapper button:active {
+	background-color: #9dcfb9;
+	border-style: outset;
+}
+
+#guarantee .content .contentSection .reviews .quotes {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#author {
+	text-align: center;
+	-webkit-text-stroke: 1px var(--dark);
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.quotes .quoteContainer {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#quote {
+	font-style: italic;
+	padding-left: 20px;
+	padding-right: 20px;
+	word-wrap: break-word;
+}
+
+.quotes h3 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.quotes .startquote {
+	text-align: left;
+}
+
+.quotes .endquote {
+	text-align: right;
+	padding-right: 0;
+}
+
+.quotes .ratingQuotes {
+	padding-left: 50px;
+}
+
+.quotes .ratingQuotes .fa.fa-star {
+	font-size: 16px;
+}
+/* ------- GUARANTEE END ------- */
+
+/* ------- REPAIR DETAILS ------- */
+#repairDetails {
+	height: 300px;
+	background-color: rgb(191, 197, 201);
+}
+
+#repairDetails h1 {
+	text-align: center;
+	font-size: 60px;
+	margin-top: 0;
+	padding-top: 50px;
+}
+
+#repairDetails .grid {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+#repairDetails .grid .col {
+	padding-left: 20px;
+	padding-right: 20px;
+}

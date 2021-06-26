@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+	<title>Contact | Mr Mobile Luton</title>
+	<meta charset="UTF-8"/>
+
+	<!-- Scripts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="static/lib/alertifyjs/alertify.min.js"></script>
+	<script src="static/js/contact.js"></script>
+
+	<!--
+	Stylesheets
+	general.css: 		In all pages, contains navigation bar & other details
+	products.css:		Stylesheet for this page
+	scrollbar.css:		Stylesheet for customising the scrollbar
+	-->
+	<link rel="stylesheet" text="text/css" href="static/css/general.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/contact.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/scrollbar.css" />
+	<link rel="stylesheet" text="text/css" href="static/lib/alertifyjs/css/alertify.min.css" />
+	<link rel="stylesheet" text="text/css" href="static/lib/alertifyjs/css/themes/default.min.css" />
+</head>
+
+<body>
+	<!-- Navigation bar -->
+	<div class="navbar">
+		<div class="buttons">
+			<a href="index.html" class="logo">
+				<img border="0" class="logo_img" alt="MrMobile logo" src="static/css/imgs/logo.png" />
+			</a>
+			<a href="#" class="active">Contact us</a>
+			<a href="products.html">Products</a>
+			<a href="index.html">Home</a>
+		</div>
+	</div>
+	<div class="navbar-space"></div>
+
+	<!-- Main website -->
+	<div class="content">
+		<h1>Contact us</h1>
+		<div id="contact-form">
+			<div class="grid">
+				<div class="labelcontainer">
+					<label for="email">Email address:<span class="required">*</span></label>
+				</div>
+				<div class="inputcontainer">
+					<input type="text" id="email" name="email" placeholder="Email address" class="inputtext">
+					<div class="floaterror small" id="email-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
+
+				<div class="labelcontainer">
+					<label for="subject">Subject:<span class="required">*</span></label>
+				</div>
+				<div class="inputcontainer">
+					<input maxlen="50" type="text" id="subject" name="subject" placeholder="i.e Product refund" class="inputtext">
+					<div class="floaterror small" id="subject-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
+
+				<div class="labelcontainer">
+					<label for="body">Body:<span class="required">*</span></label><br />
+					<h2 class="desc">Please be detailed in this <br />description.</h2>
+				</div>
+				<div class="inputcontainer">
+					<textarea maxlen="500" type="text" id="body" name="body" placeholder="Details on the reason of contact" class="inputtext"></textarea>
+					<div class="floaterror large" id="body-msg">
+						<h3 class="msg"></h3>
+					</div>
+				</div>
+			</div>
+			<div class="submitcontainer">
+				<button id="submit">Submit</button>
+			</div>
+		</form>
+
+		<div class="section" id="footer">
+			<div class="content">
+				<div class="col">
+					<div id="businessDetails">
+						<h4 style="font-size: 30; margin-bottom: 0px; margin-top: 0;">MrMobile</h4>
+						<h4 style="margin-top: 10px;">Unit 10A, 172 Dunstable Rd, Luton LU4 8FG</h4>
+					</div>
+					<div id="contactDetails">
+						<div class="detail">
+							<img src="https://img.icons8.com/ios-filled/50/000000/apple-phone.png"/>
+							<h4>07884 420200</h4>
+						</div>
+						<div class="detail">
+							<img src="https://img.icons8.com/metro/26/000000/new-post.png"/>
+							<h4 style="color: red;">missing@email.address</h4>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div id="links">
+					<a href="/about">About</a>
+					<a href="/products">Products</a>
+					<a href="/contact">Contact</a>
+					<a href="/">Home</a>
+					</div>
+					<h4 class="rights">Copyright © 2021 MrMobile. All Rights Reserved</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

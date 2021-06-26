@@ -1,0 +1,220 @@
+<html lang="en">
+<head>
+	<title>Mr Mobile Luton</title>
+	<meta charset="UTF-8"/>
+
+	<!-- Scripts -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="static/js/home.js"></script>
+
+	<!--
+	Stylesheets
+	general.css: 		In all pages, contains navigation bar & other details
+	home.css:			Stylesheet for this page
+	wave.css:			Stylesheet for the wave
+	waveDisplaced.css:	Stylesheet for the wave not at the bottom of the page
+	reveal.css:			Revealing text
+	popup.css:			Stylesheet for the popup
+	scrollbar.css:		Stylesheet for customising the scrollbar
+	-->
+	<link rel="stylesheet" text="text/css" href="static/css/general.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/home.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/wave.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/waveDisplaced.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/reveal.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/popup.css" />
+	<link rel="stylesheet" text="text/css" href="static/css/scrollbar.css" />
+</head>
+
+<body>
+	<!-- Background image is located below -->
+	<img src="static/css/imgs/bg.jpg" id="bgimg" />
+
+	<!-- Navigation bar -->
+	<div class="navbar">
+		<div class="buttons">
+			<a href="index.html" class="logo">
+				<img border="0" class="logo_img" alt="MrMobile logo" src="static/css/imgs/logo.png" />
+			</a>
+			<a href="contact.html">Contact us</a>
+			<a href="products.html">Products</a>
+			<a href="index.html" class="active">Home</a>
+		</div>
+	</div>
+	<div class="navbar-space"></div>
+
+	<!-- Main website -->
+
+	<!-- Top section -->
+	<div class="section" id="main">
+		<h1 class="fadein">Mr Mobile</h1>
+		<h2 class="fadein">The highest quality mobile & laptop repair service in Luton</h2>
+		<div class="buttons">
+			<div class="buttonContainer inactive">
+				<button class="fadein" onclick="$([document.documentElement, document.body]).animate({scrollTop: $('#products').offset().top}, 2000);">Services</button>
+				<button class="fadein" onclick="window.open('contact', '_self')">Contact us</button>
+			</div>
+		</div>
+		<div class="wave"></div>
+		<div class="wave faded"></div>
+	</div>
+
+	<!-- Guarantee section + reviews -->
+	<div class="section" id="guarantee">
+		<div class="content">
+			<div class="col inactiveLeft">
+				<img src="static/css/imgs/guarantee.png" />
+			</div>
+			<div class="col inactiveFade">
+				<h1>GUARANTEED. <br /><span class="flashfast" id="fast-0">F</span><span class="flashfast" id="fast-1">A</span><span class="flashfast" id="fast-2">S</span><span class="flashfast" id="fast-3">T</span><span id= "flash-3" >.</span><br /> REPAIRS.</h1>
+			</div>
+			<div class="col inactiveRight">
+				<img src="static/css/imgs/speed.png" />
+			</div>
+		</div>
+	</div>
+
+	<div class="waveDispl flipped" style="background-color: rgb(191, 197, 201); z-index: 2;"></div>
+
+	<!-- Repair details section -->
+	<div class="section" id="repairDetails">
+		<h1 class="dropin inactive">Repair services are available for:</h1>
+		 <div class="grid fadeinrepair inactive">
+			<div class="col">
+				 <!-- empty for formatting -->
+	 		</div>
+			<div class="col">
+				<img src="static/css/imgs/desktop-repair.png" />
+				<h2>Laptops & Desktops</h2>
+			</div>
+			<div class="col">
+				<img src="static/css/imgs/mobile-repair.png" style="
+				    display: block;
+				    max-width: 200px;
+				    max-height: 200px;
+				    width: auto;
+				    height: auto;
+				    margin-left: auto;
+				    margin-right: auto;
+				">
+				<h2 style="margin-top: 20px;">Mobile</h2>
+			</div>
+			<div class="col">
+				<img src="static/css/imgs/screen-repair.png" />
+				<h2>Screen replacement</h2>
+			</div>
+		 </div>
+	</div>
+
+	<!-- Review section -->
+	<div class="section" id="reviews">
+		<div class="paddingcontainer">
+			<h1 class="slidein inactive">Don't take it from us..<br />let our customers tell you!</h1>
+			<div class="quote inactive">
+				<div class="flashdiv">
+					<h2 class="quotemark startquote">"</h2>
+					<h2 id="quote">hi there</h2>
+					<h2 class="quotemark endquote">"</h2>
+					<h2 id="author">Author name</h2>
+					<div class="rating">
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</div>
+				</div>
+
+				<div class="bar">
+					<div class="buttonContainer">
+						<button onclick="changeQuotes(-1)">◄</button>
+					</div>
+					<div class="dotContainer">
+					</div>
+					<div class="buttonContainer">
+						<button onclick="changeQuotes(1)">►</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- buy products section -->
+	<div class="section" id="products">
+		<div class="reveal">
+			<h1>Buy our popular products</h1>
+			<div class="cover hidden"></div>
+		</div>
+		<div class="buttonContainer">
+			<button onclick="openPopup('apple');" class="slideinLeft">APPLE</button>
+			<button onclick="openPopup('samsung');" class="slideinRight">SAMSUNG</button>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div class="section" id="footer">
+		<div class="content">
+			<div class="col">
+				<div id="businessDetails">
+					<h4 style="font-size: 30; margin-bottom: 0px; margin-top: 0;">MrMobile</h4>
+					<h4 style="margin-top: 10px;">Unit 10A, 172 Dunstable Rd, Luton LU4 8FG</h4>
+				</div>
+				<div id="contactDetails">
+					<div class="detail">
+						<img src="https://img.icons8.com/ios-filled/50/000000/apple-phone.png"/>
+						<h4>07884 420200</h4>
+					</div>
+					<div class="detail">
+						<img src="https://img.icons8.com/metro/26/000000/new-post.png"/>
+						<h4 style="color: red;">missing@email.address</h4>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div id="links">
+				<a href="/about">About</a>
+				<a href="/products">Products</a>
+				<a href="/contact">Contact</a>
+				<a href="/">Home</a>
+				</div>
+				<h4 class="rights">Copyright © 2021 MrMobile. All Rights Reserved</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-apple" style="display: none;">
+		<div class="box">
+			<div class="content">
+				<button class="exit" onclick="closePopup('apple')">x</button>
+				<h1>Apple products</h1>
+				<div class="products" style="
+				    display: grid;
+				    grid-template-columns: 20% 20% 20% 20% 20%;
+				    grid-template-rows: 50% 50%;
+				    height: calc(100% - 100px);
+				    width: 100%;
+					text-align: center;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="popup-samsung" style="display: none;">
+		<div class="box">
+			<div class="content">
+				<button class="exit" onclick="closePopup('samsung')">x</button>
+				<h1>Samsung products</h1>
+				<div class="products" style="
+				    display: grid;
+				    grid-template-columns: 20% 20% 20% 20% 20%;
+				    grid-template-rows: 50% 50%;
+				    height: calc(100% - 100px);
+				    width: 100%;
+					text-align: center;">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
