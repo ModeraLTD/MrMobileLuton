@@ -203,11 +203,11 @@ $(document).ready(function() {
 	addProducts();
 
 	$(".product.apple").click(function() {
-		window.open("products?tab=apple");
+		window.open("products.html?tab=apple");
 	});
 
 	$(".product.samsung").click(function() {
-		window.open("products?tab=samsung");
+		window.open("products.html?tab=samsung");
 	});
 
 });
@@ -248,106 +248,41 @@ products = {
 	"apple": [
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "iPhone 7 (128GB)",
+			"cost": "145"
 		},
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "iPhone 6s (64GB)",
+			"cost": "100"
 		},
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "iPhone X (64GB)",
+			"cost": "260"
 		},
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "iPhone XS Max (64GB)",
+			"cost": "350"
 		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		}
 	],
 	"samsung": [
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "Samsung S9",
+			"cost": "170"
 		},
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "Samsung S10",
+			"cost": "270"
 		},
 		{
 			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
+			"name": "Samsung S20",
+			"cost": "410"
 		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		},
-		{
-			"img": "https://img.icons8.com/ios-glyphs/100/000000/iphone.png",
-			"name": "Sample product",
-			"cost": "0.00"
-		}
 	]
 }
 

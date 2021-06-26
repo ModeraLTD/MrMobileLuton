@@ -107,6 +107,7 @@
 .popup .box .content .products .product h2, h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-family: 'RobotoThin';
 }
 
 .popup .box .content .products .product h3::before {
