@@ -14,19 +14,9 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/about")
-def about():
-    return ""
-
-
 @app.route("/products")
 def products():
     return render_template("products.html")
-
-
-@app.route("/repairs")
-def repairs():
-    return render_template("repairs.html")
 
 
 @app.route("/contact")
