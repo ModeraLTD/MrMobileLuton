@@ -25,6 +25,12 @@ body {
 	height: calc(100% - 80px);
 }
 
+@media screen and (max-width: 760px) {
+	#main {
+		height: 50%;
+	}
+}
+
 #main h1,h2{
 	text-align: center;
 	color: black;
