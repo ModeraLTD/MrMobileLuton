@@ -266,6 +266,21 @@ const products = {
 			"name": "iPhone XS Max (64GB)",
 			"cost": "350"
 		},
+		{
+			"img": "https://lh3.googleusercontent.com/proxy/ZLtOfLA0yqzJ2l53EQG7-SeYINtrQAlliYdYhUF1dzMpOzbiKzLYu_3wiOZ5t3cn1FHLCdRoE5fguGXLz7igY7yz1MpEsAKPRgCDSB_kc1L020uLyPHEuDfgXl-PYykc7ZzEz4GyK1oQ9h-Sm60qicWvWz8UFpQz9OK-gfFPO7PNcSP8DxyD8No",
+			"name": "iPhone 8",
+			"cost": "?"
+		},
+		{
+			"img": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-black-select-2019_GEO_EMEA?wid=940&hei=1112&fmt=png-alpha&.v=1567021766023",
+			"name": "iPhone 11",
+			"cost": "?"
+		},
+		{
+			"img": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&hei=1112&fmt=png-alpha&.v=1604343704000",
+			"name": "iPhone 12",
+			"cost": "?"
+		},
 	],
 	"samsung": [
 		{
